@@ -27,8 +27,8 @@ public class AmazonDynamoDBConfig {
     @Profile("local-docker")
     @Bean
     public AmazonDynamoDB amazonDynamoDB2() {
-        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("AKIA2CQV366QHC5UKGYP",
-                "xBsVwDnDv1OxRO+TsYt7k3YYVLGNWHxUcCe0y6/n");
+        BasicAWSCredentials basicAWSCredentials = new BasicAWSCredentials("YOUR KEY",
+                "YOUR SECRET");
         AWSStaticCredentialsProvider baseCredentialsProvider = new AWSStaticCredentialsProvider(basicAWSCredentials);
         return AmazonDynamoDBClientBuilder.standard()
                 .withRegion(Regions.AP_NORTHEAST_2)
