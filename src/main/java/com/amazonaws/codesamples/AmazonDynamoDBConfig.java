@@ -1,6 +1,7 @@
 package com.amazonaws.codesamples;
 
 import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper;
 import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
@@ -25,8 +26,10 @@ public class AmazonDynamoDBConfig {
     @Profile("!default")
     @Bean
     public AmazonDynamoDB amazonDynamoDB3() {
+        AWSCredentialsProvider ec2ContainerCredentialsProvider = new EC2ContainerCredentialsProviderWrapper();
         return AmazonDynamoDBClientBuilder.standard()
                 .withRegion(Regions.AP_NORTHEAST_2)
+                .withCredentials(ec2ContainerCredentialsProvider)
                 .build();
     }
 }
