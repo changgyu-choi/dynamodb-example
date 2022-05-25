@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: hello
-        image: dynamodb-example:0.1
-        imagePullPolicy: Never
+        image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example:0.1
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
           - name: SPRING_PROFILES_ACTIVE
-            value: local-docker
+            value: testing
