@@ -1,4 +1,4 @@
-FROM gradle:7.4-jdk17
+FROM gradle:7.4-jdk17-alpine
 
 COPY . /usr/src/app
 
