@@ -20,6 +20,28 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            cpu: 1
+            memory: 2G
+          limits:
+            cpu: 1
+            memory: 2G
         env:
+          - name: TZ
+            value: "Asia/Seoul"
           - name: SPRING_PROFILES_ACTIVE
             value: testing
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 180
+          timeoutSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 180
+          timeoutSeconds: 3
+      terminationGracePeriodSeconds: 5
