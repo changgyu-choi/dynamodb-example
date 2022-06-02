@@ -4,4 +4,4 @@
 
 # port-forward
 
-`$ kubectl port-forward {POD_NAME} 8080`
+`$ kubectl port-forward {POD_NAME} 8080:8080`
