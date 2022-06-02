@@ -36,12 +36,12 @@ spec:
           httpGet:
             path: /
             port: 8080
-          initialDelaySeconds: 180
+          initialDelaySeconds: 60
           timeoutSeconds: 3
         readinessProbe:
           httpGet:
             path: /
             port: 8080
-          initialDelaySeconds: 180
+          initialDelaySeconds: 60
           timeoutSeconds: 3
       terminationGracePeriodSeconds: 5
