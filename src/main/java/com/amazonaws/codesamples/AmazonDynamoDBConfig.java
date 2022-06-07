@@ -25,6 +25,8 @@ public class AmazonDynamoDBConfig {
     @Profile("!default")
     @Bean
     public AmazonDynamoDB amazonDynamoDB3() {
-        return AmazonDynamoDBClientBuilder.standard().build();
+        return AmazonDynamoDBClientBuilder.standard()
+                .withRegion(Regions.AP_NORTHEAST_2)
+                .build();
     }
 }
