@@ -5,6 +5,7 @@ phases:
     commands:
       - REPOSITORY_URI=692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example
       - EKS_CLUSTER_NAME=dynamo-eks
+      - export KUBECONFIG=$HOME/.kube/config
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
