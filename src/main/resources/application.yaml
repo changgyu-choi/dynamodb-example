@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc-secretsmanager:mariadb://localhost:3306/test
+    username: osb/dev/mysql
+    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver

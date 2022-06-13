@@ -1,4 +1,4 @@
-package com.amazonaws.codesamples;
+package com.amazonaws.codesamples.music;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+public class MusicController {
 
     private AmazonDynamoDB amazonDynamoDB;
 
-    public HelloController(AmazonDynamoDB amazonDynamoDB) {
+    public MusicController(AmazonDynamoDB amazonDynamoDB) {
         this.amazonDynamoDB = amazonDynamoDB;
     }
 
-    @GetMapping("/hello")
+    @GetMapping("/music")
     public String sayHello() {
         DynamoDBMapper mapper = new DynamoDBMapper(amazonDynamoDB);
 

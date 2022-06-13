@@ -1,4 +1,4 @@
-package com.amazonaws.codesamples;
+package com.amazonaws.codesamples.music;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
