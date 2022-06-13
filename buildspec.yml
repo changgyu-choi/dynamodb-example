@@ -8,6 +8,7 @@ phases:
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example
+      - EKS_CLUSTER_NAME=dynamo-eks
       - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
@@ -19,6 +20,6 @@ phases:
       - echo Build completed on `date`
       - docker push $REPOSITORY_URI:latest
       - echo Deploy K8s...
-      - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
+      - aws eks update-kubeconfig --region ap-northeast-2 --name $EKS_CLUSTER_NAME
       - kubectl apply -f k8s/deployment.yaml
       - kubectl rollout restart deploy hello-deployment
