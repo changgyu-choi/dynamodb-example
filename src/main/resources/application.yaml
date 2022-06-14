@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: hello
   datasource:
     url: jdbc-secretsmanager:mariadb://localhost:3306/test
     username: osb/dev/mysql
