@@ -3,3 +3,6 @@ spring:
     url: jdbc-secretsmanager:mariadb://database-2.cluster-cvhx7lz6ywsu.ap-northeast-2.rds.amazonaws.com:3306/test
     username: osb/dev/mysql
     driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
+  redis:
+    host: clustercfg.redis-test.5p5img.memorydb.ap-northeast-2.amazonaws.com
+    port: 6379

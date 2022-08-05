@@ -32,7 +32,12 @@ dependencies {
     implementation 'com.amazonaws:aws-java-sdk-rds'
     implementation 'com.amazonaws:aws-java-sdk-sts'
     implementation 'com.amazonaws:aws-java-sdk-sqs'
+    implementation 'redis.clients:jedis'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'it.ozimov:embedded-redis:0.7.1'
 }
 
 test {
