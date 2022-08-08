@@ -4,6 +4,8 @@ spring:
     username: osb/dev/mysql
     driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
   redis:
-    host: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com
-    port: 6379
+    #host: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com
+    #port: 6379
     ssl: true
+    cluster:
+      nodes: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com:6379
