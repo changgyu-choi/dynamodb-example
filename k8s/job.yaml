@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: badgeFillJob
+spec:
+  template:
+    spec:
+      containers:
+        - name:  badgeFillJob
+          image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example:latest
+          args:
+            - dev
+            - badgeFillJob
+          resources:
+            requests:
+              cpu: 1
+              memory: 1.5G
+            limits:
+              cpu: 1
+              memory: 1.5G
+          env:
+            - name: TZ
+              value: "Asia/Seoul"
+      restartPolicy: Never

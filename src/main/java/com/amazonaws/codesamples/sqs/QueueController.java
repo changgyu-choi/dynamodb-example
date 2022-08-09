@@ -1,4 +1,4 @@
-package com.amazonaws.codesamples;
+package com.amazonaws.codesamples.sqs;
 
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
