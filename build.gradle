@@ -13,11 +13,14 @@ ext {
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
 }
 
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom "io.awspring.cloud:spring-cloud-aws-dependencies:3.0.0-M1"
+        mavenBom "com.amazonaws:aws-java-sdk-bom:1.12.238"
     }
 }
 
@@ -26,8 +29,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.5'
-    implementation 'com.amazonaws.secretsmanager:aws-secretsmanager-jdbc:1.0.8'
-    implementation platform('com.amazonaws:aws-java-sdk-bom:1.12.238')
     implementation 'com.amazonaws:aws-java-sdk-dynamodb'
     implementation 'com.amazonaws:aws-java-sdk-rds'
     implementation 'com.amazonaws:aws-java-sdk-sts'
@@ -38,6 +39,8 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'it.ozimov:embedded-redis:0.7.1'
+    implementation 'io.awspring.cloud:spring-cloud-aws-starter'
+    implementation 'io.awspring.cloud:spring-cloud-aws-starter-secrets-manager'
 }
 
 test {

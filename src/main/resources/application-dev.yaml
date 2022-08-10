@@ -1,9 +1,21 @@
 spring:
+  application:
+    name: hello
   datasource:
-    url: jdbc-secretsmanager:mariadb://database-2.cluster-cvhx7lz6ywsu.ap-northeast-2.rds.amazonaws.com:3306/test
-    username: osb/dev/mysql
-    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
+    url: jdbc:mariadb://database-2.cluster-cvhx7lz6ywsu.ap-northeast-2.rds.amazonaws.com:3306/test
+    username: ${username}
+    password: ${password}
+    driver-class-name: org.mariadb.jdbc.Driver
   redis:
     ssl: true
     cluster:
       nodes: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com:6379
+  cloud:
+    aws:
+      credentials:
+        profile:
+          name: default
+      region:
+        static: ap-northeast-2
+  config:
+    import: "aws-secretsmanager:osb/dev/mysql"

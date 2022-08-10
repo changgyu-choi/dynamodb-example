@@ -2,9 +2,19 @@ spring:
   application:
     name: hello
   datasource:
-    url: jdbc-secretsmanager:mariadb://localhost:3306/test
-    username: osb/dev/mysql
-    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
+    url: jdbc:mariadb://localhost:3306/test
+    username: ${username}
+    password: ${password}
+    driver-class-name: org.mariadb.jdbc.Driver
   redis:
     host: localhost
     port: 6379
+  cloud:
+    aws:
+      credentials:
+        profile:
+          name: sandbox
+      region:
+        static: ap-northeast-2
+  config:
+    import: "aws-secretsmanager:osb/dev/mysql"
