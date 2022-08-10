@@ -22,8 +22,9 @@ public class BadgeFillJob extends Job {
 
         while (true) {
             List<Message> messages = sqs.receiveMessage(QUEUE_URL).getMessages();
-            if (messages.size() > 0) {
-                log.info("sqs: {}", messages.get(0).getBody());
+            for (Message m : messages) {
+                log.info("sqs: {}", m.getBody());
+                sqs.deleteMessage(QUEUE_URL, m.getReceiptHandle());
             }
 
             try {

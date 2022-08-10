@@ -31,7 +31,10 @@ public class QueueController {
     @GetMapping("/listen")
     public String listen() {
         List<Message> messages = sqs.receiveMessage(QUEUE_URL).getMessages();
-        log.info("{}", messages.size());
-        return messages.get(0).getBody();
+        for (Message m : messages) {
+            log.info("sqs: {}", m.getBody());
+            sqs.deleteMessage(QUEUE_URL, m.getReceiptHandle());
+        }
+        return "Ok";
     }
 }

@@ -1,4 +1,4 @@
-FROM gradle:7.4-jdk17
+FROM public.ecr.aws/g3x5t9q0/gradle:7.4-jdk17
 
 COPY . /usr/src/app
 
