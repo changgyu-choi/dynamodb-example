@@ -16,7 +16,5 @@ spring:
           name: sandbox
       region:
         static: ap-northeast-2
-      secretsmanager:
-        region: ap-northeast-2
   config:
     import: "aws-secretsmanager:osb/dev/mysql"
