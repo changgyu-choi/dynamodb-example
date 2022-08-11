@@ -10,10 +10,6 @@ spring:
     ssl: true
     cluster:
       nodes: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com:6379
-  cloud:
-    aws:
-      region:
-        static: ap-northeast-2
   config:
     import: "aws-secretsmanager:osb/dev/mysql"
 

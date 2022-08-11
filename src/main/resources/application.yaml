@@ -9,12 +9,5 @@ spring:
   redis:
     host: localhost
     port: 6379
-  cloud:
-    aws:
-      credentials:
-        profile:
-          name: sandbox
-      region:
-        static: ap-northeast-2
   config:
     import: "aws-secretsmanager:osb/dev/mysql"

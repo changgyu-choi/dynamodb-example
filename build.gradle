@@ -39,8 +39,6 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'it.ozimov:embedded-redis:0.7.1'
-    implementation 'io.awspring.cloud:spring-cloud-aws-starter'
-    implementation 'io.awspring.cloud:spring-cloud-aws-starter-secrets-manager'
 }
 
 test {
