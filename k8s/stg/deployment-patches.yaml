@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: hello
+          image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example:latest
+          resources:
+            requests:
+              cpu: 0.9
+              memory: 0.9G
+            limits:
+              cpu: 0.9
+              memory: 0.9G
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: stg
