@@ -12,10 +12,6 @@ spring:
       nodes: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com:6379
   cloud:
     aws:
-      credentials:
-        instance-profile: true
-        profile:
-          name:
       region:
         static: ap-northeast-2
   config:
