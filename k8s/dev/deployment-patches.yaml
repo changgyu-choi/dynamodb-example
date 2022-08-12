@@ -18,4 +18,4 @@ spec:
               memory: 0.9G
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: stg
+              value: dev
