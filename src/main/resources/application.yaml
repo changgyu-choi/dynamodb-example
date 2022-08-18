@@ -8,4 +8,12 @@ spring:
   redis:
     host: localhost
     port: 6379
-
+  kafka:
+    producer:
+      bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: 127.0.0.1:9092
+      enable-auto-commit: false
+    listener:
+      ack-mode: manual
