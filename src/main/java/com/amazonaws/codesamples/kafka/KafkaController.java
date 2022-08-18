@@ -26,7 +26,7 @@ public class KafkaController {
     @KafkaListener(topics = "topic1", groupId = "g1")
     public void listen(@Payload String payload,
                        @Header(KafkaHeaders.RECEIVED_PARTITION) int partition,
-                       @Header(KafkaHeaders.KEY) String key) {
+                       @Header(KafkaHeaders.RECEIVED_KEY) String key) {
         log.info("--------------------");
         log.info("partition:{}, key:{}, payload:{}", partition, key, payload);
         log.info("--------------------");
