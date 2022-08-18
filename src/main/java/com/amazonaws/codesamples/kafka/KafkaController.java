@@ -15,17 +15,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class KafkaController {
 
     @Autowired
-    KafkaTemplate kafkaTemplate;
+    KafkaTemplate<String, String> kafkaTemplate;
 
     @GetMapping("/ksend")
     public void send() {
-        kafkaTemplate.send("topic1", "hello");
+        String key = String.valueOf(System.currentTimeMillis());
+        kafkaTemplate.send("topic1", key, "hello");
     }
 
     @KafkaListener(topics = "topic1", groupId = "g1")
-    public void listen(@Payload String payload, @Header(KafkaHeaders.RECEIVED_PARTITION) int partition) {
+    public void listen(@Payload String payload,
+                       @Header(KafkaHeaders.RECEIVED_PARTITION) int partition,
+                       @Header(KafkaHeaders.KEY) String key) {
         log.info("--------------------");
-        log.info("partion:{}, payload:{}", partition, payload);
+        log.info("partition:{}, key:{}, payload:{}", partition, key, payload);
         log.info("--------------------");
     }
 
