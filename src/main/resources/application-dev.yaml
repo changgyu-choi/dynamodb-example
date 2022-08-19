@@ -4,9 +4,10 @@ spring:
     username: osb/dev/mysql
     driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
   redis:
-    ssl: true
+    #ssl: true
     cluster:
-      nodes: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com:6379
+      #nodes: clustercfg.redis-demo.5p5img.memorydb.ap-northeast-2.amazonaws.com:6379
+      nodes: dynamo.5p5img.clustercfg.memorydb.ap-northeast-2.amazonaws.com:6379
   kafka:
     producer:
       bootstrap-servers:
