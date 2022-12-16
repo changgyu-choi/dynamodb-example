@@ -38,6 +38,7 @@ dependencies {
     implementation 'redis.clients:jedis'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    runtimeOnly("com.h2database:h2")
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation 'it.ozimov:embedded-redis:0.7.1'

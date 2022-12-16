@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class KafkaController {
 
-    @Autowired
+  /*  @Autowired
     KafkaTemplate<String, String> kafkaTemplate;
 
     @GetMapping("/ksend")
@@ -30,6 +30,6 @@ public class KafkaController {
         log.info("--------------------");
         log.info("partition:{}, key:{}, payload:{}", partition, key, payload);
         log.info("--------------------");
-    }
+    }*/
 
 }

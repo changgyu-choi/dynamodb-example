@@ -9,8 +9,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class Application {
 
     public static void main(String[] args) {
-
-        if (args.length == 0) {
+        SpringApplication.run(Application.class, args);
+        /*if (args.length == 0) {
             SpringApplication.run(Application.class, args);
         } else {
             String beanName = args[0];
@@ -24,7 +24,7 @@ public class Application {
                 job.start();
             }
             System.exit(0);
-        }
+        }*/
     }
 
 }

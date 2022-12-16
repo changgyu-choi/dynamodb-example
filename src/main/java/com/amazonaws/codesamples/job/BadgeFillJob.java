@@ -20,6 +20,7 @@ public class BadgeFillJob extends Job {
     @Override
     protected void run(String... args) {
 
+        /*
         while (true) {
             List<Message> messages = sqs.receiveMessage(QUEUE_URL).getMessages();
             for (Message m : messages) {
@@ -34,6 +35,9 @@ public class BadgeFillJob extends Job {
             }
 
             log.info("{}", System.currentTimeMillis());
+
+
         }
+         */
     }
 }

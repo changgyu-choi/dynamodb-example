@@ -2,18 +2,21 @@ spring:
   application:
     name: hello
   datasource:
-    url: jdbc-secretsmanager:mariadb://localhost:3306/test
-    username: osb/dev/mysql
-    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
-  redis:
-    host: localhost
-    port: 6379
-  kafka:
-    producer:
-      bootstrap-servers: 127.0.0.1:9092
-    consumer:
-      auto-offset-reset: earliest
-      bootstrap-servers: 127.0.0.1:9092
-      enable-auto-commit: false
-    listener:
-      ack-mode: manual
+    url: jdbc:h2:~/operation;MODE=MYSQL;AUTO_SERVER=TRUE
+    username: sa
+#  datasource:
+#    url: jdbc-secretsmanager:mariadb://localhost:3306/test
+#    username: osb/dev/mysql
+#    driver-class-name: com.amazonaws.secretsmanager.sql.AWSSecretsManagerMariaDBDriver
+#  redis:
+#    host: localhost
+#    port: 6379
+#  kafka:
+#    producer:
+#      bootstrap-servers: 127.0.0.1:9092
+#    consumer:
+#      auto-offset-reset: earliest
+#      bootstrap-servers: 127.0.0.1:9092
+#      enable-auto-commit: false
+#    listener:
+#      ack-mode: manual

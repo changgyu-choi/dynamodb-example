@@ -13,7 +13,7 @@ import java.io.IOException;
 @Profile("default")
 public class ShopEmbeddedRedis {
 
-    private RedisServer redisServer;
+   /* private RedisServer redisServer;
 
     @PostConstruct
     public void redisServer() throws IOException {
@@ -26,5 +26,5 @@ public class ShopEmbeddedRedis {
         if (redisServer != null) {
             redisServer.stop();
         }
-    }
+    }*/
 }

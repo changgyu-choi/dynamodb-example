@@ -13,7 +13,7 @@ public class ShopRedisController {
     @Autowired
     private ShopRepository shopRepository;
 
-    @PostMapping("/v1/shops")
+   /* @PostMapping("/v1/shops")
     public void insert(){
         Shop shop = new Shop("PARAN", "파란헤어");
         shopRepository.save(shop);
@@ -23,6 +23,6 @@ public class ShopRedisController {
     public String select(){
         Shop shop = shopRepository.findById("PARAN").get();
         return shop.getName();
-    }
+    }*/
 
 }

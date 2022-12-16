@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AmazonDynamoDBConfig {
 
-    @Bean
+   /* @Bean
     public AmazonDynamoDB amazonDynamoDB2() {
         return AmazonDynamoDBClientBuilder.standard()
                 .withRegion(Regions.AP_NORTHEAST_2)
                 .build();
-    }
+    }*/
 }

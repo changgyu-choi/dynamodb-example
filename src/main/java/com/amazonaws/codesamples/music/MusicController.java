@@ -10,7 +10,7 @@ public class MusicController {
 
     private AmazonDynamoDB amazonDynamoDB;
 
-    public MusicController(AmazonDynamoDB amazonDynamoDB) {
+    /*public MusicController(AmazonDynamoDB amazonDynamoDB) {
         this.amazonDynamoDB = amazonDynamoDB;
     }
 
@@ -20,5 +20,5 @@ public class MusicController {
 
         Music music = mapper.load(Music.class, "방탄소년단", "봄날");
         return music.getArtist() + ":" + music.getSongTitle();
-    }
+    }*/
 }
