@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: hello
-          image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example:latest
+          image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/calvin-sandbox:latest
           resources:
             requests:
               cpu: 0.9

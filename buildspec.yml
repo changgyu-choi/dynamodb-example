@@ -7,8 +7,8 @@ phases:
       - aws --version
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example
-      - EKS_CLUSTER_NAME=kai-sandbox
+      - REPOSITORY_URI=692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/calvin-sandbox
+      - EKS_CLUSTER_NAME=calvin-sandbox
       - export KUBECONFIG=$HOME/.kube/config
   build:
     commands:
