@@ -8,7 +8,7 @@ spec:
       serviceAccountName: osb-service-account
       containers:
         - name:  badge-fill-job-2
-          image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example:latest
+          image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dean-example:latest
           command: ["java", "-jar", "-Xmx1g", "-Xms1g", "-server", "build/libs/dynamodb-example-1.0-SNAPSHOT.jar"]
           args:
             - badgeFillJob

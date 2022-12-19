@@ -14,7 +14,7 @@ spec:
       labels:
         app: hello
     spec:
-      serviceAccountName: osb-service-account
+      serviceAccountName: dean-eks-service-account
       containers:
       - name: hello
         image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/dynamodb-example:latest
